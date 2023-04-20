@@ -177,7 +177,7 @@ export const Datepicker = forwardRef<HTMLDivElement, DatepickerProps>(
     const nextScroll = () => {
       if (containerRef.current) {
         containerRef.current.scrollBy({
-          left: +500,
+          left: +100,
           behavior: "smooth",
         });
       }
@@ -186,7 +186,7 @@ export const Datepicker = forwardRef<HTMLDivElement, DatepickerProps>(
     const prevScroll = () => {
       if (containerRef.current) {
         containerRef.current.scrollBy({
-          left: -500,
+          left: -100,
           behavior: "smooth",
         });
       }
