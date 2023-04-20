@@ -13,7 +13,7 @@ export default defineConfig(() => ({
       entry: resolve(__dirname, "src/index.ts"),
       name: "react-horizontal-datepicker",
       //fileName: "index",
-      fileName: "index.js",
+      fileName: "index",
     },
     rollupOptions: {
       external: ["react"],
