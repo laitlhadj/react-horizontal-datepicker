@@ -147,29 +147,6 @@ export const Datepicker = forwardRef<HTMLDivElement, DatepickerProps>(
       if (noRanges) {
         onChange([changedDate, null, null]);
       }
-      if (hasStartRange) {
-        if (isSameDay(startValue, changedDate)) {
-          onChange([null, null, null]);
-        } else {
-          if (isBefore(startValue, changedDate)) {
-            const initialRange = eachDay(startValue, changedDate);
-            const range = disabledDates
-              ? filterRangesByDisabledDates(initialRange, disabledDates)
-              : initialRange;
-
-            onChange([startValue, changedDate, range]);
-          } else {
-            const initialRange = eachDay(changedDate, startValue);
-            const range = disabledDates
-              ? filterRangesByDisabledDates(initialRange, disabledDates)
-              : initialRange;
-            onChange([changedDate, startValue, range]);
-          }
-        }
-      }
-      if (isRangeFilled) {
-        onChange([changedDate, null, null]);
-      }
     };
 
     const containerRef = React.useRef<HTMLDivElement | null>(null);
